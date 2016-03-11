@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'streams/new'
+
+  get 'posts/new'
+
+  get 'channels/new'
+
+  get 'relationships/new'
+
+  get 'sessions/new'
+
   root 'static_pages#home'
   get 'static_pages/help'
   get 'static_pages/about'
