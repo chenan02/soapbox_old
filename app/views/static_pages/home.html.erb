@@ -1,3 +1,5 @@
-<% provide(:title, "Home") %>
-<h1>Soapbox</h1>
-<p>Home page for Soapbox Web App</p>
+<% if logged_in? %>
+	<%= render 'static_pages/loggedin' %>
+<% else %>
+	<%= render 'static_pages/notloggedin' %>
+<% end %>
