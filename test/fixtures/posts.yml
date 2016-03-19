@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: MyText
+  content: Hello this is a test
   stream_id: 1
 
 two:
-  content: MyText
-  stream_id: 1
+  content: Hey this is test two
+  stream_id: 2

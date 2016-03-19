@@ -1,7 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  phone_number: MyString
+andrew:
+  phone_number: '2483809188'
+  password_digest: <% User.digest('password') %>
+  activated: true
+  activated_at: Time.zone.now
 
-two:
-  phone_number: MyString
+michael:
+  phone_number: '1234567890'
+  password_digest: <% User.digest('password') %>
+  activated: true
+  activated_at: Time.zone.now
+
+<% 9.times do |n| %>
+user_<%= n %>:
+	phone_number: <%= '123456789#{n}' %>
+	password_digest: <% User.digest('password') %>
+  	activated: true
+  	activated_at: Time.zone.now
+<% end %>
