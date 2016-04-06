@@ -8,5 +8,9 @@ streams = {
 	"Finance" => ["EconBizFin", "financialtimes"]
 }
 
-body = function(streams["Finance"])
-send_message(body)
+users = {
+	"2483809188" => "Andrew Chen"
+}
+
+body = function(streams["Politics"])
+send_message(users, body)

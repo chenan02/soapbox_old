@@ -14,7 +14,7 @@ def function(streams)
 		path    = "/1.1/statuses/user_timeline.json"
 		query   = URI.encode_www_form(
 		    "screen_name" => stream,
-		    "count" => 5,
+		    "count" => 10,
 		)
 		address = URI("#{baseurl}#{path}?#{query}")
 		#`puts address

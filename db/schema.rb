@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319134542) do
+ActiveRecord::Schema.define(version: 20160405051337) do
 
   create_table "posts", force: :cascade do |t|
     t.text     "content"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160319134542) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.string   "name"
+    t.integer  "frequency"
   end
 
 end
