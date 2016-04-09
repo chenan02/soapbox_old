@@ -3,7 +3,7 @@
 one:
   content: Hello this is a test
   stream_id: 1
-
+  
 two:
   content: Hey this is test two
   stream_id: 2

@@ -5,17 +5,20 @@ andrew:
   password_digest: <% User.digest('password') %>
   activated: true
   activated_at: Time.zone.now
+  name: "Andrew"
 
 michael:
   phone_number: '1234567890'
   password_digest: <% User.digest('password') %>
   activated: true
   activated_at: Time.zone.now
+  name: "Michael"
 
 <% 9.times do |n| %>
 user_<%= n %>:
-	phone_number: <%= '123456789#{n}' %>
-	password_digest: <% User.digest('password') %>
-  	activated: true
-  	activated_at: Time.zone.now
+  phone_number: <%= '123456789#{n}' %>
+  password_digest: <% User.digest('password') %>
+    activated: true
+    activated_at: Time.zone.now
+  name: user_<%= n %>
 <% end %>
