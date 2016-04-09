@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
   
   get 'password_resets/new'
 
@@ -12,11 +12,9 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  get 'streams/new'
+  get 'streams' => 'streams#index'
 
   get 'posts/new'
-
-  get 'channels/new'
 
   get 'relationships/new'
 
