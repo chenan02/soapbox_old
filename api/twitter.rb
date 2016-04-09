@@ -7,13 +7,13 @@ def most_favorited(tweets)
 	most_favorited["text"]
 end
 
-def function(streams)
+def get_tweet(stream)
 	all_tweets = []
-	streams.each do |stream|
+	stream.each do |account|
 		baseurl = "https://api.twitter.com"
 		path    = "/1.1/statuses/user_timeline.json"
 		query   = URI.encode_www_form(
-		    "screen_name" => stream,
+		    "screen_name" => account,
 		    "count" => 10,
 		)
 		address = URI("#{baseurl}#{path}?#{query}")
