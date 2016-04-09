@@ -12,5 +12,5 @@ users = {
 	"2483809188" => "Andrew Chen"
 }
 
-body = function(streams["Politics"])
+body = get_tweet(streams["Politics"])
 send_message(users, body)
