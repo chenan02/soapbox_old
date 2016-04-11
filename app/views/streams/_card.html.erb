@@ -1,0 +1,8 @@
+<div class="card" id-"card-<%= stream.name %>">
+	<img class="card-img-top" data-src="../../images/<%= stream.name %>" alt="Card image">
+	<div claass="card-block">
+		<h4 class="card-title"><%= stream.name %></h4>
+		<p class="card-text"><%= stream.description %></p>
+		<%= link_to "Follow", relationship_path, method: :post %>
+	</div>
+</div>
