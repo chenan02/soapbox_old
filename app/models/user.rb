@@ -43,14 +43,19 @@ class User < ActiveRecord::Base
     end
     
     # activates account
-    def activate
-        update_attribute(:activated, true)
-        update_attribute(:activated_at, Time.zone.now)
+    def activate(pin)
+        if pin == self.activation_digest
+            update_attribute(:activated, true)
+            update_attribute(:activated_at, Time.zone.now)
+            return true
+        return false
     end
     
     # sends activation text
     def send_activation_text
-
+        pin = rand(9999)
+        send_activation_text(self, pin)
+        update_attribute(:activation_digest, "#{pin}")
     end
     
     # sets password reset attributes
